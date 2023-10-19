@@ -1,0 +1,88 @@
+
+/* // `sm` applies to x-small devices (portrait phones, less than 576px) */
+@media (min-width: 575.98px) { 
+    /* style={{display:"flex",flexWrap:"wrap",flexDirection:"row",width:"100%"}} */
+    #home{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 100%;
+     }
+     /* style={{marginRight:"30%",width:"60%",marginLeft:"25%"}}  */
+   
+
+ }
+
+/* // `md` applies to small devices (landscape phones, less than 768px) */
+@media (min-width: 767.98px) { 
+
+    #home{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 100%;
+     }
+
+ }
+
+/* // `lg` applies to medium devices (tablets, less than 992px) */
+@media (min-width: 991.98px) { 
+
+    #home{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 100%;
+     }
+
+
+ }
+
+/* // `xl` applies to large devices (desktops, less than 1200px) */
+@media (min-width: 1199.98px) { 
+
+    #home{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+     }
+
+     #home2{
+        margin-right: 30%;
+        width: 60%;
+        margin-left: 25%;
+      }
+      #home3{
+        margin-right: -6%;
+        margin-top: 1%;
+        flex: 1 0 0;
+        /* margin-bottom: 10%; */
+       }
+
+ }
+
+/* // `xxl` applies to x-large devices (large desktops, less than 1400px) */
+@media (min-width: 1399.98px) { 
+
+    #home{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+     }
+
+     #home2{
+        margin-right: 30%;
+        width: 60%;
+        margin-left: 6%;
+      }
+/* style={{marginRight:"-6%",marginTop:"1%",flex: "1 0 0%"}} */
+
+#home3{
+   margin-right: -6%;
+   margin-top: 1%;
+   flex: 1 0 0;
+   /* margin-bottom: 10%; */
+  }
+ }
