@@ -1,11 +1,12 @@
 import React from "react";
 import { Partner } from "./Partner";
+import "./Home.css"
 const Home = () => {
   return (
     <div>
-      <div class="row" style={{display:"flex",flexWrap:"wrap",flexDirection:"row",width:"100%"}} >
-        <div >
-          <div class="col" style={{marginRight:"-6%"}}>
+      <div  style={{display:"flex",flexWrap:"wrap",flexDirection:"row",width:"100%"}} >
+        <div id="home" >
+          <div id="home3" style={{flex: "1 0 0%",marginRight:"-6%"}}>
            
               <img
                 style={{width:"100%",}}
@@ -13,8 +14,8 @@ const Home = () => {
                 alt="mmm"
               />
           </div>
-          <div style={{marginRight:"-6%",marginTop:"1%"}} class="col">
-           <div  style={{marginRight:"30%",width:"60%",marginLeft:"25%"}} class="d-flex flex-row mb-3">
+          <div id="home3" >
+           <div id="home2" style={{alignItems:"center",justifyContent:"center"}} >
            <img
                 style={{width:"50%",borderRadius:"5%"}}
                 src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjRghYXXltBXhPZmLkJa_56h8vAfZrSRP23tk8hT-NYK9f5VgUMm_Ly81KnDkgK_gX1WjLdK18nLSGaKe0sEyzWvWRauR_yI_A2Fd5Ufazr5beg7pqpMp0sPQBiweRjG2UBIPZYVmMSpsnqLSQYBKkz2Eg0At_fiAebYsPaEfFHzBaf1reY7owl89AgeGRU/s320/Real.png"
@@ -49,7 +50,7 @@ const Home = () => {
       </div>
       {/* <Partner /> */}
       
-      <div class="d-flex p-2" style={{alignItems:"center",justifyContent:"center"}}><h6 style={{fontSize:"30px"}}>SOPA makes clothes
+      <div  class="d-flex p-2" style={{alignItems:"center",justifyContent:"center"}}><h6 style={{fontSize:"200%"}}>SOPA makes clothes
 to elevate everyday life 
 through lighthearted escapism. While styles vary by
 season,<br /> all collections are guided by the ineffablef
@@ -57,7 +58,7 @@ sense of freedom that comes with travel.</h6></div>
 <br />
 <h1 >SHOP BY ESSENTIALS</h1>
 <br />
-<div style={{display:"flex",flexWrap:"wrap",flexDirection:"row",justifyContent:"center"}}>
+<div  style={{display:"flex",flexWrap:"wrap",flexDirection:"row",justifyContent:"center"}}>
 <div style={{display:"inline",fontSize:"25px",border:"2px solid black",margin:"1%"}}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;All&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div><div style={{display:"inline",fontSize:"25px",border:"2px solid black",margin:"1%"}}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Winter collections&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div><div style={{display:"inline",fontSize:"25px",border:"2px solid black",margin:"1%"}}>&nbsp;&nbsp;&nbsp;&nbsp;New Arrivals&nbsp;&nbsp;&nbsp;&nbsp;</div><div style={{display:"inline",fontSize:"25px",border:"2px solid black",margin:"1%"}}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Best Sellers&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div><div style={{display:"inline",fontSize:"25px",border:"2px solid black",margin:"1%"}}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Flash Sale&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
 </div>
 <br /><br />
@@ -70,6 +71,14 @@ sense of freedom that comes with travel.</h6></div>
 <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhnJFxIrzCdW-RsFqgOG8LwbnvjQOCDW8a0G9PrAkNRd4BOhVrLlwIjAxeL2_LuaWduRBX2hO53GZu0grs-Cwynqf1SF2t7BUTVw8uuO4VxHIliEpCMjmPQVm05q54ESi_9NupG3DuoOVNTs2DlYH7Usd_p2-Jb14vXh-Pl0_JPAI9dwIECl5P9ZdaE2zmI/s320/men.png" alt="mm" />
 </div> */}
 </div>
+<h1 style={{backgroundColor: "#F2F2F3"}}> Want To Design Your Own Calm We Can Do It </h1>
+
+<div style={{backgroundColor: "#F2F2F3"}}>
+<a href="https://www.youtube.com/watch?v=yjur-UUJhkg" target="blank">
+  <img width="90%" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhP6qSxbo0GWn8kAGkRell73IFTJbHoXfJtia4N_sHmtclOzMZKgLG1sCImpwPFmch6J5OeuuYHq1KDXLCsOglIdCLgtCOzIrDWJaJJ4PF4AIXWf4kMPd6ukDDNlmEUed_PKJNhXLhJowBc4CMe2GkusKs8q8Ikn9lrWcvBACvfivA8Q1Gj5DMHHH1uhedq/s16000/Screenshot%202023-10-19%20222406.png" alt="video" />
+</a>
+</div>
+
     </div>
   );
 };
