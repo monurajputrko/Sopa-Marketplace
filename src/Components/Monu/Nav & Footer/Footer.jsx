@@ -15,7 +15,7 @@ const Footer = () => {
               style={{width:"70%"}}
               src="https://cdn.animaapp.com/projects/653027fd5d5a615f385b22b9/releases/653029a770b79ea74ce24116/img/logo-12@2x.png" alt=""
             />
-            <h2>Contact</h2>
+            <h3 style={{color:"#DE6737",fontWeight:"bold"}}>Contact</h3>
             <p style={{fontSize:"90%",fontWeight:"bold"}}>
               <strong>Address : </strong>869 Chandni Chowk
             </p>
@@ -43,7 +43,7 @@ const Footer = () => {
           </div>
 
           <div class="col">
-            <h2>About</h2>
+            <h3 style={{color:"#DE6737",fontWeight:"bold"}}>About</h3>
             <a style={{fontSize:"90%",fontWeight:"bold"}} href="#">About us</a>
             <a style={{fontSize:"90%",fontWeight:"bold"}} href="#">Delivery Information</a>
             <a style={{fontSize:"90%",fontWeight:"bold"}} href="#">Privacy Policy</a>
@@ -52,7 +52,7 @@ const Footer = () => {
           </div>
 
           <div class="col">
-            <h2>My Account</h2>
+            <h3 style={{color:"#DE6737",fontWeight:"bold"}}>My Account</h3>
             
             <a style={{fontSize:"90%",fontWeight:"bold"}} href="#">Sign in</a>
             <a style={{fontSize:"90%",fontWeight:"bold"}} href="#">View Cart</a>
@@ -62,7 +62,7 @@ const Footer = () => {
           </div>
 
           <div id="hide" class="col install">
-            <h2>Install App</h2>
+            <h3 style={{color:"#DE6737",fontWeight:"bold"}}>Install App</h3>
             <p style={{fontSize:"90%",fontWeight:"bold"}}>From App Store or Google Play Store</p>
             <div class="row">
               <img

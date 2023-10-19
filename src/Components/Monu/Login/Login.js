@@ -1,14 +1,51 @@
 import React, { useState } from "react";
 import "./Login.css";
 import { FaFacebookF, FaGoogle, FaTwitter } from "react-icons/fa";
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+import { getAuth,GoogleAuthProvider,signInWithPopup } from 'firebase/auth';
+import { useNavigate } from "react-router-dom";
 
 
-const Login = () => {
+
+const Login = ({onClose,setImg1,setM}) => {
   const [isSignup, setIsSignup] = useState(false);
+  const navigate = useNavigate();
 
   const toggleForm = () => {
     setIsSignup(!isSignup);
   };
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyDZcCwWRlB5n4qB4V1ZAPS8g9hHN4a3jUw",
+    authDomain: "sopa-332de.firebaseapp.com",
+    projectId: "sopa-332de",
+    storageBucket: "sopa-332de.appspot.com",
+    messagingSenderId: "588670818449",
+    appId: "1:588670818449:web:d2ad314d90d2358d6dc730",
+    measurementId: "G-MYV11W22L6"
+  };
+  
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+   const auth = getAuth(app);
+  
+ const provider = new GoogleAuthProvider();
+  
+  const signinWithgoogle = () => {
+    signInWithPopup(auth, provider)
+      .then((result) => {
+        setImg1(result.user.photoURL);
+        console.log(result.user.photoURL);
+        setM();
+        onClose();
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
+  
 
   return (
     <div  className={`container ${isSignup ? "right-panel-active" : ""}`}>
@@ -20,7 +57,7 @@ const Login = () => {
               <FaFacebookF />
             </a>
             <a href="#" className="social">
-              <FaGoogle />
+              <FaGoogle onClick={signinWithgoogle} />
             </a>
             <a href="#" className="social">
               <FaTwitter />
@@ -41,7 +78,7 @@ const Login = () => {
               <FaFacebookF />
             </a>
             <a href="#" className="social">
-              <FaGoogle />
+              <FaGoogle onClick={signinWithgoogle} />
             </a>
             <a href="#" className="social">
               <FaTwitter />
