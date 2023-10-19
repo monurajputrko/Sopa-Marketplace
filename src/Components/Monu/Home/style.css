@@ -1,0 +1,198 @@
+.partner {
+    align-items: flex-start;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 80px 135px;
+    position: relative;
+}
+
+.partner .content {
+    align-items: flex-start;
+    background-color: var(--secondary-colorswhite-smoke);
+    border-radius: 24px;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 10px;
+    padding: 80px 100px;
+    position: relative;
+}
+
+.partner .heading-title {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 60px;
+    position: relative;
+}
+
+.partner .text-wrapper {
+    color: var(--primary-colorsblack);
+    font-family: var(--headers-t5-font-family);
+    font-size: var(--headers-t5-font-size);
+    font-style: var(--headers-t5-font-style);
+    font-weight: var(--headers-t5-font-weight);
+    letter-spacing: var(--headers-t5-letter-spacing);
+    line-height: var(--headers-t5-line-height);
+    margin-top: -1px;
+    position: relative;
+    text-align: center;
+    width: 970px;
+}
+
+.partner .logo {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 187px;
+    position: relative;
+}
+
+.partner .img {
+    height: 57px;
+    position: relative;
+    width: 224px;
+}
+
+.partner .div {
+    color: var(--secondary-colorssteel);
+    font-family: var(--headers-t2-font-family);
+    font-size: var(--headers-t2-font-size);
+    font-style: var(--headers-t2-font-style);
+    font-weight: var(--headers-t2-font-weight);
+    letter-spacing: var(--headers-t2-letter-spacing);
+    line-height: var(--headers-t2-line-height);
+    margin-top: -1px;
+    position: relative;
+    text-align: center;
+    width: 253px;
+}
+
+.partner .HUMANS-OF-NEW-YORK {
+    color: var(--secondary-colorssteel);
+    font-family: var(--body-text-regular-font-family);
+    font-size: var(--body-text-regular-font-size);
+    font-style: var(--body-text-regular-font-style);
+    font-weight: var(--body-text-regular-font-weight);
+    letter-spacing: var(--body-text-regular-letter-spacing);
+    line-height: var(--body-text-regular-line-height);
+    position: relative;
+    text-align: center;
+    width: fit-content;
+}
+
+
+:root {
+    --body-text-bold-font-family: "Rubik-Bold", Helvetica;
+    --body-text-bold-font-size: 12px;
+    --body-text-bold-font-style: normal;
+    --body-text-bold-font-weight: 700;
+    --body-text-bold-letter-spacing: 0px;
+    --body-text-bold-line-height: 16px;
+    --body-text-medium-font-family: "Rubik-Medium", Helvetica;
+    --body-text-medium-font-size: 12px;
+    --body-text-medium-font-style: normal;
+    --body-text-medium-font-weight: 500;
+    --body-text-medium-letter-spacing: 0px;
+    --body-text-medium-line-height: 16px;
+    --body-text-regular-font-family: "Rubik-Regular", Helvetica;
+    --body-text-regular-font-size: 20px;
+    --body-text-regular-font-style: normal;
+    --body-text-regular-font-weight: 400;
+    --body-text-regular-letter-spacing: 0px;
+    --body-text-regular-line-height: 24px;
+    --body-text-semibold-font-family: "Rubik-SemiBold", Helvetica;
+    --body-text-semibold-font-size: 12px;
+    --body-text-semibold-font-style: normal;
+    --body-text-semibold-font-weight: 600;
+    --body-text-semibold-letter-spacing: 0px;
+    --body-text-semibold-line-height: 16px;
+    --effect: 2px 0px 5px 0px rgba(165, 165, 165, 0.25);
+    --effect-02: ;
+    --effect-blur: ;
+    --grey-colorsgrey-100: rgba(248, 249, 253, 1);
+    --grey-colorsgrey-200: rgba(239, 241, 248, 1);
+    --grey-colorsgrey-300: rgba(227, 229, 237, 1);
+    --grey-colorsgrey-400: rgba(210, 213, 223, 1);
+    --grey-colorsgrey-500: rgba(183, 186, 201, 1);
+    --grey-colorsgrey-600: rgba(153, 157, 174, 1);
+    --grey-colorsgrey-700: rgba(118, 123, 146, 1);
+    --grey-colorsgrey-800: rgba(84, 92, 124, 1);
+    --grey-colorsgrey-900: rgba(22, 31, 66, 1);
+    --headers-t1-font-family: "NotoSerif Lao-Bold", Helvetica;
+    --headers-t1-font-size: 72px;
+    --headers-t1-font-style: normal;
+    --headers-t1-font-weight: 700;
+    --headers-t1-letter-spacing: 0px;
+    --headers-t1-line-height: 80px;
+    --headers-t2-font-family: "NotoSerif Lao-Bold", Helvetica;
+    --headers-t2-font-size: 66px;
+    --headers-t2-font-style: normal;
+    --headers-t2-font-weight: 700;
+    --headers-t2-letter-spacing: 0px;
+    --headers-t2-line-height: 74px;
+    --headers-t3-font-family: "NotoSerif Lao-Bold", Helvetica;
+    --headers-t3-font-size: 56px;
+    --headers-t3-font-style: normal;
+    --headers-t3-font-weight: 700;
+    --headers-t3-letter-spacing: 0px;
+    --headers-t3-line-height: 64px;
+    --headers-t4-font-family: "NotoSerif Lao-Bold", Helvetica;
+    --headers-t4-font-size: 48px;
+    --headers-t4-font-style: normal;
+    --headers-t4-font-weight: 700;
+    --headers-t4-letter-spacing: 0px;
+    --headers-t4-line-height: 56px;
+    --headers-t5-font-family: "NotoSerif Lao-Bold", Helvetica;
+    --headers-t5-font-size: 40px;
+    --headers-t5-font-style: normal;
+    --headers-t5-font-weight: 700;
+    --headers-t5-letter-spacing: 0px;
+    --headers-t5-line-height: 46px;
+    --headers-t6-font-family: "NotoSerif Lao-Bold", Helvetica;
+    --headers-t6-font-size: 36px;
+    --headers-t6-font-style: normal;
+    --headers-t6-font-weight: 700;
+    --headers-t6-letter-spacing: 0px;
+    --headers-t6-line-height: 40px;
+    --headers-t7-font-family: "NotoSerif Lao-Bold", Helvetica;
+    --headers-t7-font-size: 28px;
+    --headers-t7-font-style: normal;
+    --headers-t7-font-weight: 700;
+    --headers-t7-letter-spacing: 0px;
+    --headers-t7-line-height: 32px;
+    --headers-t8-font-family: "NotoSerif Lao-Bold", Helvetica;
+    --headers-t8-font-size: 24px;
+    --headers-t8-font-style: normal;
+    --headers-t8-font-weight: 700;
+    --headers-t8-letter-spacing: 0px;
+    --headers-t8-line-height: 28px;
+    --other-colorsblue: rgba(53, 53, 96, 1);
+    --other-colorsdodger-blue: rgba(49, 132, 255, 1);
+    --other-colorsnone: rgba(120, 120, 120, 1);
+    --other-colorsorangy-red: rgba(241, 78, 46, 1);
+    --other-colorsorangy-yellow: rgba(253, 249, 227, 1);
+    --other-colorspurple-mimosa: rgba(164, 65, 234, 1);
+    --other-colorsreddish-orange: rgba(254, 123, 30, 1);
+    --other-colorsyellow: rgba(255, 218, 64, 1);
+    --other-colorsyellowish-green: rgba(204, 225, 192, 1);
+    --primary-colorsblack: rgba(2, 2, 29, 1);
+    --primary-colorssopa-color-fresh-green: rgba(193, 246, 81, 1);
+    --secondary-colorssteel: rgba(117, 134, 156, 1);
+    --secondary-colorswhite: rgba(255, 255, 255, 1);
+    --secondary-colorswhite-smoke: rgba(242, 242, 242, 1);
+    --underline-text-decoration-font-family: "Rubik-Regular", Helvetica;
+    --underline-text-decoration-font-size: 16px;
+    --underline-text-decoration-font-style: normal;
+    --underline-text-decoration-font-weight: 400;
+    --underline-text-decoration-letter-spacing: 0px;
+    --underline-text-decoration-line-height: 22px;
+    --underline-text-regular-font-family: "Rubik-Regular", Helvetica;
+    --underline-text-regular-font-size: 12px;
+    --underline-text-regular-font-style: normal;
+    --underline-text-regular-font-weight: 400;
+    --underline-text-regular-letter-spacing: 0px;
+    --underline-text-regular-line-height: 16px;
+}
