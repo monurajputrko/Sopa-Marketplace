@@ -22,7 +22,7 @@ export const Nav = () => {
           }}
         >
           <p style={{ color: "white", fontWeight: "bold" }}>
-            Free Shiping on Over Rs.500
+            Free Shiping on Orders Over <p style={{color:"#DE6737",display:"inline",fontWeight: "bold"}}>Rs.500</p>
           </p>
         </div>
         <nav

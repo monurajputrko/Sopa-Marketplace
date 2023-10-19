@@ -77,7 +77,7 @@ button.normal {
 }
 
 #newsletter button {
-    background-color: #088178;
+    background-color: #DE6737;
     color: wheat;
     white-space: nowrap;
     border-top-left-radius: 0;
@@ -209,7 +209,7 @@ footer .follow i {
 }
 
 footer .install .row img {
-    border: 1px solid #088178;
+    border: 1px solid #DE6737;
     border-radius: 6px;
 }
 
@@ -219,7 +219,7 @@ footer .install img {
 
 footer .follow i:hover,
 footer a:hover {
-    color: #088178;
+    color: #DE6737;
 }
 
 @media (max-width:799px) {

@@ -83,8 +83,9 @@ sense of freedom that comes with <h5 style={{display:"inline-block",color:"#DE67
 <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhnJFxIrzCdW-RsFqgOG8LwbnvjQOCDW8a0G9PrAkNRd4BOhVrLlwIjAxeL2_LuaWduRBX2hO53GZu0grs-Cwynqf1SF2t7BUTVw8uuO4VxHIliEpCMjmPQVm05q54ESi_9NupG3DuoOVNTs2DlYH7Usd_p2-Jb14vXh-Pl0_JPAI9dwIECl5P9ZdaE2zmI/s320/men.png" alt="mm" />
 </div> */}
 </div>
-<h1 style={{backgroundColor: "#F2F2F3"}}> Want To Design Your Own Calm We Can Do It </h1>
-
+<h1 style={{backgroundColor: "#F2F2F3"}}></h1>
+<h1 style={{backgroundColor: "#F2F2F3"}}> Want To <h1 style={{display:"inline",color:"#DE6737"}}>Design</h1> Your Own Calm We Can Do It </h1>
+<h1 style={{backgroundColor: "#F2F2F3"}}></h1>
 <div style={{backgroundColor: "#F2F2F3"}}>
 <a href="https://www.youtube.com/watch?v=7zlOOv_vG84" target="blank">
   <img width="90%" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhP6qSxbo0GWn8kAGkRell73IFTJbHoXfJtia4N_sHmtclOzMZKgLG1sCImpwPFmch6J5OeuuYHq1KDXLCsOglIdCLgtCOzIrDWJaJJ4PF4AIXWf4kMPd6ukDDNlmEUed_PKJNhXLhJowBc4CMe2GkusKs8q8Ikn9lrWcvBACvfivA8Q1Gj5DMHHH1uhedq/s16000/Screenshot%202023-10-19%20222406.png" alt="video" />
