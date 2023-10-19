@@ -52,7 +52,7 @@ export const Nav = () => {
                 <li class="nav-item">
                   <Link
                     to={"/"}
-                    style={{ fontWeight: "bold", fontSize: "20px" }}
+                    style={{color:"#DE6737", fontWeight:"bolder", fontSize: "20px" }}
                     class="nav-link active"
                     aria-current="page"
                     href="#"
@@ -93,15 +93,15 @@ export const Nav = () => {
 
               <ul class="navbar-nav  mb-2 mb-lg-0">
                 <li class="nav-item" style={{ marginRight: "30px" }}>
-                  <FiSearch fontSize="30px" />
+                  <FiSearch style={{color:"#DE6737"}} fontSize="30px" />
                 </li>
                 <li class="nav-item" style={{ marginRight: "30px" }}>
                   <Link to="/cart">
-                    <HiOutlineShoppingBag fontSize="30px" />
+                    <HiOutlineShoppingBag style={{color:"#DE6737"}} fontSize="30px" />
                   </Link>
                 </li>
                 <li class="nav-item" style={{ marginRight: "30px" }}>
-                  <BiUserX fontSize="30px" onClick={onOpen} />
+                  <BiUserX fontSize="30px" style={{color:"#DE6737"}} onClick={onOpen} />
                 </li>
                 {/* <button class="btn btn-outline-success" onClick={onOpen}>Login</button> */}
               </ul>
