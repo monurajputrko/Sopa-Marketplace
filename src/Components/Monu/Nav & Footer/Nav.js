@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { Box, Flex, Heading, Modal, ModalBody, ModalCloseButton, ModalContent, ModalOverlay, useDisclosure } from "@chakra-ui/react";
 import Login from "../Login/Login";
 import { FiSearch } from "react-icons/fi";
@@ -11,59 +12,103 @@ export const Nav = () => {
   
     return (
       <div>
-        {/* <Flex as="nav" padding="1.5rem" bg="teal.500" color="white">
-          <Box mr="5">
-            <Heading as="h6" size="md">Logo</Heading>
-          </Box>
-          <Box display="flex" alignItems="center">
-            <Link mr="5">Home</Link>
-            <Link mr="5">About</Link>
-            <Link mr="5">Services</Link>
-            <Link mr="5" onClick={onOpen}>Login</Link>
-            <Link>Contact</Link>
-          </Box>
-        </Flex>
-        <BackdropExample isOpen={isOpen} onClose={onClose} /> */}
-        <nav  class="navbar navbar-expand-lg .bg-secondary-subtle" >
-  <div class="container-fluid">
-  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhFvPtZSosaSQwD7wliaztTcIcja9skOQ0yoMHVkaTFzKADmJYXNR1qOJV2gs_Yw158M1Fgx-_o662ddGmRzs_vDmgi8o9CKIWT_PmSslTKGngDzXSPiVwxFpEKBIXaiOI74HPbxL-0vh9rfd0lXOPO3PyFZCloTUMqg05QjW3wYlxgHhpsWkl9Dk_Vgm7i/s1600/logo.png" width="70px" class="img-thumbnail" alt="..." />
-    <h1>&nbsp;SOPA</h1>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <Link to={'/'} style={{fontWeight:"bold",fontSize:"25px"}} class="nav-link active" aria-current="page" href="#">Home</Link>
-        </li>
-        <li class="nav-item">
-          <Link to={'product'} style={{fontWeight:"bold",fontSize:"25px"}}  class="nav-link" >Product</Link>
-        </li>
-       
-        <li class="nav-item">
-          <Link to={'contact'} style={{fontWeight:"bold",fontSize:"25px"}}  class="nav-link"   >Contact</Link>
-        </li>
-        <li class="nav-item">
-          <Link to={'contact'} style={{fontWeight:"bold",fontSize:"25px"}}  class="nav-link" href="#"  >Disabled</Link>
-        </li>
-      </ul>
-     
-      <ul class="navbar-nav  mb-2 mb-lg-0">
-      <li class="nav-item" style={{marginRight:"30px"}} >
-        <FiSearch  fontSize="35px"/>
-        </li>
-      <li class="nav-item" style={{marginRight:"30px"}}>
-        <Link to='/cart'><HiOutlineShoppingBag  fontSize="35px" /></Link>
-        </li>
-      <li class="nav-item" style={{marginRight:"30px"}}>
-        <BiUserX  fontSize="35px" onClick={onOpen} />
-        </li>
-        {/* <button class="btn btn-outline-success" onClick={onOpen}>Login</button> */}
-      </ul>
-    </div>
-  </div>
-</nav>
-<BackdropExample isOpen={isOpen} onClose={onClose} />
+        <div
+          style={{
+            backgroundColor: "black",
+            height: "25px",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <p style={{ color: "white", fontWeight: "bold" }}>
+            Free Shiping on Over Rs.500
+          </p>
+        </div>
+        <nav
+          class="navbar navbar-expand-lg .bg-secondary-subtle"
+        >
+          <div class="container-fluid">
+            <img
+              src="https://cdn.animaapp.com/projects/653027fd5d5a615f385b22b9/releases/653029a770b79ea74ce24116/img/logo-12@2x.png"
+              width="100px"
+              class="img-thumbnail"
+              alt="..."
+            />
+            {/* <h1>&nbsp;SOPA</h1> */}
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <Link
+                    to={"/"}
+                    style={{ fontWeight: "bold", fontSize: "20px" }}
+                    class="nav-link active"
+                    aria-current="page"
+                    href="#"
+                  >
+                    Home
+                  </Link>
+                </li>
+                <li class="nav-item">
+                  <Link
+                    to={"product"}
+                    style={{ fontWeight: "bold", fontSize: "20px" }}
+                    class="nav-link"
+                  >
+                    Product
+                  </Link>
+                </li>
+
+                <li class="nav-item">
+                  <Link
+                    to={"contact"}
+                    style={{ fontWeight: "bold", fontSize: "20px" }}
+                    class="nav-link"
+                  >
+                    Contact
+                  </Link>
+                </li>
+                <li class="nav-item">
+                  <Link
+                    to={"contact"}
+                    style={{ fontWeight: "bold", fontSize: "20px" }}
+                    class="nav-link"
+                    href="#"
+                  >
+                    Disabled
+                  </Link>
+                </li>
+              </ul>
+
+              <ul class="navbar-nav  mb-2 mb-lg-0">
+                <li class="nav-item" style={{ marginRight: "30px" }}>
+                  <FiSearch fontSize="30px" />
+                </li>
+                <li class="nav-item" style={{ marginRight: "30px" }}>
+                  <Link to="/cart">
+                    <HiOutlineShoppingBag fontSize="30px" />
+                  </Link>
+                </li>
+                <li class="nav-item" style={{ marginRight: "30px" }}>
+                  <BiUserX fontSize="30px" onClick={onOpen} />
+                </li>
+                {/* <button class="btn btn-outline-success" onClick={onOpen}>Login</button> */}
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <BackdropExample isOpen={isOpen} onClose={onClose} />
       </div>
     );
   }
