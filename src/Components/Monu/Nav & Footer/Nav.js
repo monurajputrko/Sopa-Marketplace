@@ -68,7 +68,7 @@ export const Nav = () => {
                 </li>
                 <li class="nav-item">
                   <Link
-                    to={"product"}
+                    to={"/products"}
                     style={{ fontWeight: "bold", fontSize: "20px" }}
                     class="nav-link"
                   >
