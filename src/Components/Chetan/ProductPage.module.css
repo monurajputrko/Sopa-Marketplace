@@ -1,19 +1,23 @@
 .mainContainer{
     width: 80%;
-    /* border: solid black 1px; */
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     margin: auto;
+
+}
+.Container{
+    width: 100%;
     padding: 20px;
+    justify-content: center;
     display: flex;
     flex-wrap: wrap;
-    
 }
 .card{
     /* border: solid red 1px; */
     box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.04);
-    
     width: 250px;
-    margin: 10px;
+    margin: 20px;
     padding: 2px;
+    justify-content: center;
     align-content: center;
 }
 

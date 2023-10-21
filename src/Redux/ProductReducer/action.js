@@ -15,11 +15,11 @@ export const getProductFailure=()=>{
 
 // fetching data from api
 
-export const getProducts=async(dispatch)=>{
+export const getProducts=async(dispatch,baseurl)=>{
 
     try {
         dispatch(getProductRequest());
-        const response=await axios.get(`https://sopa-market.onrender.com/products`);
+        const response=await axios.get(baseurl);
         console.log(response);
         dispatch(getProductSuccess(response.data));
     } catch (error) {
