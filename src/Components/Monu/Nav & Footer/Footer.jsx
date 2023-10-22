@@ -1,8 +1,10 @@
+import { useContext } from "react";
+import { MyContext } from "../../../Context/Create";
 import "./footer.css";
 
 
 const Footer = () => {
-
+  const { setAuth } = useContext(MyContext);
     return (
       <div>
        
@@ -54,7 +56,9 @@ const Footer = () => {
           <div class="col">
             <h3 style={{color:"#DE6737",fontWeight:"bold"}}>My Account</h3>
             
-            <a style={{fontSize:"90%",fontWeight:"bold"}} href="#">Sign in</a>
+            <a style={{fontSize:"90%",fontWeight:"bold",cursor:"pointer"}}  onClick={()=>{
+               setAuth(false);
+            }} >Log Out</a>
             <a style={{fontSize:"90%",fontWeight:"bold"}} href="#">View Cart</a>
             <a style={{fontSize:"90%",fontWeight:"bold"}} href="#">My Wishlist</a>
             <a style={{fontSize:"90%",fontWeight:"bold"}} href="#">Track My Order</a>
