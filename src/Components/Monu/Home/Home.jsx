@@ -1,9 +1,9 @@
-import React from "react";
-import { Partner } from "./Partner";
+
 import "./Home.css"
 import Products from "./Products";
 import { Link } from "react-router-dom";
 const Home = () => {
+ 
   return (
     <div>
       <div  style={{display:"flex",flexWrap:"wrap",flexDirection:"row",width:"100%"}} >
@@ -68,9 +68,7 @@ sense of freedom that comes with <h5 style={{display:"inline-block",color:"#DE67
 <h1 >SHOP BY <h1 style={{display:"inline",color:"#DE6737"}}>ESSENTIALS</h1></h1>
 <br />
 
-<div  style={{display:"flex",flexWrap:"wrap",flexDirection:"row",justifyContent:"center"}}>
-<div style={{display:"inline",fontSize:"25px",border:"2px solid black",margin:"1%",backgroundColor:"#DE6737"}}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>All</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div><div style={{display:"inline",fontSize:"25px",border:"2px solid black",margin:"1%"}}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Winter collections</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div><div style={{display:"inline",fontSize:"25px",border:"2px solid black",margin:"1%"}}>&nbsp;&nbsp;&nbsp;&nbsp;<strong>New Arrivals</strong>&nbsp;&nbsp;&nbsp;&nbsp;</div><div style={{display:"inline",fontSize:"25px",border:"2px solid black",margin:"1%"}}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Best Sellers</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div><div style={{display:"inline",fontSize:"25px",border:"2px solid black",margin:"1%"}}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Flash Sale</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
-</div>
+
 <Products />
 
 <br /><br />
