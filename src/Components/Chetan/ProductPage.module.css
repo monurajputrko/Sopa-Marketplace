@@ -1,6 +1,7 @@
 .mainContainer{
     width: 80%;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 20px;
     margin: auto;
 
 }
@@ -30,4 +31,27 @@
 }
 .detail>p{
     color: black;
+}
+.filter{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: right;
+    align-items: center;
+    margin-right: 180px;
+    gap: 10px;
+    text-align: center;
+}
+.filter>h6{
+    margin-top: 5px;
+}
+.btn{
+    background-color: #de6737;
+    color: white;
+    border: none;
+    padding: 3px;
+    border-radius: 7px;
+}
+.detail{
+    display: flex;
+    justify-content: space-around;
 }
