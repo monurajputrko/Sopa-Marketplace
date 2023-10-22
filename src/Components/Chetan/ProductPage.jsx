@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import Loading from './Loading'
+import Loading from '../Monu/Loading/Loading'
 import { useDispatch, useSelector } from 'react-redux'
 import { getProducts } from '../../Redux/ProductReducer/action';
 import style from "./ProductPage.module.css"
@@ -13,7 +13,7 @@ function ProductPage() {
   const {products,loading}=useSelector((store)=>store.ProductsReducer);
   console.log(products);
 
-  let baseurl=`https://sopa-market.onrender.com/products?_page=1&_limit=10`
+  let baseurl=`https://sopa-marketplace-api.vercel.app/products?_page=1&_limit=10`
   useEffect(()=>{
     if(filter!=="default")
     {
