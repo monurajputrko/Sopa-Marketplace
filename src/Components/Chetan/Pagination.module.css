@@ -13,3 +13,6 @@
     color: white;
     border-radius: 10px;
 }
+.prev:hover,.next:hover{
+    transform: scale(1.05);
+}
