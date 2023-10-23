@@ -20,4 +20,3 @@ function Pagination({page,totalPage,changePage}) {
 }
 
 export default Pagination
-

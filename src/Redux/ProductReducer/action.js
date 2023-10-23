@@ -1,5 +1,5 @@
 import axios from "axios";
-import { GET_PRODUCTS_FAILURE, GET_PRODUCTS_REQUEST, GET_PRODUCTS_SUCCESS } from "./actionType";
+import { DEC_QTY, GET_CART_ITEM, GET_PRODUCTS_FAILURE, GET_PRODUCTS_REQUEST, GET_PRODUCTS_SUCCESS, INC_QTY } from "./actionType";
 
 export const getProductRequest=()=>{
     return{type:GET_PRODUCTS_REQUEST}
@@ -25,4 +25,17 @@ export const getProducts=async(dispatch,baseurl)=>{
     } catch (error) {
         dispatch(getProductFailure());
     }
+}
+
+
+export const Increment=(payload)=>{
+    return {type:INC_QTY,payload:payload}
+}
+
+export const Decrement=(payload)=>{
+    return {type:DEC_QTY,payload:payload}
+}
+
+export const getCartItem=(payload)=>{
+    return{type:GET_CART_ITEM,payload:payload}
 }

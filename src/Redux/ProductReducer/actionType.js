@@ -3,3 +3,9 @@
 export const GET_PRODUCTS_REQUEST = "GET_PRODUCTS_REQUEST";
 export const GET_PRODUCTS_SUCCESS = "GET_PRODUCTS_SUCCESS";
 export const GET_PRODUCTS_FAILURE = "GET_PRODUCTS_FAILURE";
+
+export const INC_QTY="INC_QTY";
+export const DEC_QTY="DEC_QTY";
+
+
+export const GET_CART_ITEM="GET_CART_ITEM";
