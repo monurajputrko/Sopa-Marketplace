@@ -8,7 +8,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 #Home
 
-<img width="100%" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjSOvZUOtoy85_2HF8OKr_ivnKdHPJiMEITZYiUNzp9_8IYjfL6Y_gMeJr8RZUHGgg7TN1rZnR49clmjklF0cbjQE0ihCFUGHgC9wMMHN1aX7E4HzwPUaEEqMAMoTeeRIFTT-mnsI5NTEcm0mdW2Fq5PVfRmr3MLbHO6cnozQX4zHSq41jbyICFemT_uS_u/s320/Screenshot%20(89).png" alt="img" />
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjSOvZUOtoy85_2HF8OKr_ivnKdHPJiMEITZYiUNzp9_8IYjfL6Y_gMeJr8RZUHGgg7TN1rZnR49clmjklF0cbjQE0ihCFUGHgC9wMMHN1aX7E4HzwPUaEEqMAMoTeeRIFTT-mnsI5NTEcm0mdW2Fq5PVfRmr3MLbHO6cnozQX4zHSq41jbyICFemT_uS_u/s320/Screenshot%20(89).png" alt="img" />
 
 #Login
 
