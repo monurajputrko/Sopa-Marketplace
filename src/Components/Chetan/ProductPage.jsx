@@ -15,6 +15,7 @@ function ProductPage() {
   const dispatch=useDispatch();
   const {products,loading}=useSelector((store)=>store.ProductsReducer);
   console.log(products);
+
   
   const getTotalPage= async()=>{
     try {
@@ -30,6 +31,10 @@ function ProductPage() {
     setPage(value);
   }
   let baseurl=`https://sopa-marketplace-api.vercel.app/products?_page=${page}&_limit=10`
+
+
+  let baseurl=`https://sopa-marketplace-api.vercel.app/products?_page=1&_limit=10`
+
   useEffect(()=>{
     getTotalPage();
     if(filter!=="default")
