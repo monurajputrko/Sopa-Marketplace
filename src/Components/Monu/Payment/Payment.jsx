@@ -1270,7 +1270,7 @@ import {
                         pl={"15px"}
                         mt={"45px"}
                         fontSize={{ base: "14px", md: "16px", lg: "16px" }}>
-                        I accept Voyawondar's{" "}
+                        I accept SOPA Marketplace's{" "}
                         <span style={{ color: "#008cc9" }}>
                           Terms & Conditions
                         </span>{" "}
@@ -1291,6 +1291,7 @@ import {
                   <Box className="btn">
                     {CardPay && (
                       <Button
+                      style={{backgroundColor:"#DE6737"}}
                         isDisabled={!chk}
                         w={"100%"}
                         onClick={() => {
@@ -1341,6 +1342,7 @@ import {
                     <Button
                       isDisabled={!chk}
                       w={"100%"}
+                      style={{backgroundColor:"#DE6737"}}
                       onClick={() => {
                         if (
                           !formdata.first_N ||
@@ -1365,7 +1367,7 @@ import {
                         }
                       }}
                       colorScheme="none"
-                      bg={"#008cc9"}
+                      bg={"#DE6737"}
                       py={"30px"}
                       mt={"30px"}>
                       Pay Now
@@ -1385,7 +1387,7 @@ import {
                             OTP Verification
                           </Text>
                           <Text fontSize={"15px"}>
-                            Thank You for booking on Voyawondar.
+                            Thank You for booking on SOPA Marketplace.
                           </Text>
                           <Text fontSize={"15px"} pb={"20px"}>
                             Enter the OTP shared with you.
@@ -1498,10 +1500,10 @@ import {
                   Terms & Conditions
                 </Text>
                 <Text mt={"25px"} lineHeight={"19px"} fontSize={"13px"}>
-                  Voyawondar is an authorised Agent of Expat Explore Travel.
+                  SOPA Marketplace is an authorised Agent of Expat Explore Travel.
                   Please familiarise yourself with the Expat Explore Travel
-                  payment, cancellation and refund policies and Voyawondar's Terms
-                  & Conditions. Voyawondar will charge you in the stated currency
+                  payment, cancellation and refund policies and SOPA Marketplace's Terms
+                  & Conditions. SOPA Marketplace will charge you in the stated currency
                   and we do not charge any booking fees.
                 </Text>
               </Box>

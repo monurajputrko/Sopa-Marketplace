@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { MyContext } from "../../../Context/Create";
 import "./footer.css";
+import Swal from 'sweetalert2'
 
 
 const Footer = () => {
@@ -58,6 +59,30 @@ const Footer = () => {
             
             <a style={{fontSize:"90%",fontWeight:"bold",cursor:"pointer"}}  onClick={()=>{
                setAuth(false);
+
+               let timerInterval
+Swal.fire({
+  title: 'Loging Out ...',
+  html: 'Log out in <b></b> milliseconds.',
+  timer: 2000,
+  timerProgressBar: true,
+  didOpen: () => {
+    Swal.showLoading()
+    const b = Swal.getHtmlContainer().querySelector('b')
+    timerInterval = setInterval(() => {
+      b.textContent = Swal.getTimerLeft()
+    }, 100)
+  },
+  willClose: () => {
+    clearInterval(timerInterval)
+  }
+}).then((result) => {
+  /* Read more about handling dismissals below */
+  // if (result.dismiss === Swal.DismissReason.timer) {
+  //   console.log('I was closed by the timer')
+  // }
+})
+
             }} >Log Out</a>
             <a style={{fontSize:"90%",fontWeight:"bold"}} href="#">View Cart</a>
             <a style={{fontSize:"90%",fontWeight:"bold"}} href="#">My Wishlist</a>

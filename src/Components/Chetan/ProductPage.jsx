@@ -33,7 +33,7 @@ function ProductPage() {
   let baseurl=`https://sopa-marketplace-api.vercel.app/products?_page=${page}&_limit=10`
 
 
-  let baseurl=`https://sopa-marketplace-api.vercel.app/products?_page=1&_limit=10`
+  // let baseurl=`https://sopa-marketplace-api.vercel.app/products?_page=1&_limit=10`
 
   useEffect(()=>{
     getTotalPage();

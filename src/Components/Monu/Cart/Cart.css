@@ -1,0 +1,68 @@
+.coupon-box {
+    font-size: 20px;
+    padding-bottom: 20px;
+    margin: 20px 0;
+    border-bottom: 1px solid #cecece;
+}
+
+.coupon-box input {
+    padding: 10px;
+    margin-top: 5px;
+}
+
+.coupon-box button {
+    padding: 10px;
+    background-color: black;
+    color: white;
+}
+
+.subtotal {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 50px;
+    margin: 10px;
+    font-size: 20px;
+}
+
+.orderTotal {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 50px;
+    margin: 10px;
+    font-size: 20px;
+}
+
+#continue-btn {
+    width: 40%;
+    background-color: rgb(202, 202, 84);
+    padding: 15px;
+    border: none;
+    margin: 10px;
+}
+
+@media only screen and (max-width: 480px) {
+    .coupon-box {
+        font-size: 15px;
+    }
+    .coupon-box input {
+        padding: 5px;
+    }
+    .coupon-box button {
+        padding: 5px;
+    }
+    .subtotal {
+        font-size: 15px;
+    }
+    .orderTotal {
+        font-size: 15px;
+    }
+}
+
+@media only screen and (min-width:431px) and (max-width: 760px) {
+    .subtotal {
+        font-size: 18px;
+    }
+    .orderTotal {
+        font-size: 18px;
+    }
+}

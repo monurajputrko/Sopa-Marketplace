@@ -6,6 +6,8 @@ import { PrivateRoute } from './Private';
 import AboutUs from '../Components/Monu/Login/aboutus';
 import Payment from '../Components/Monu/Payment/Payment';
 import { ChakraProvider } from '@chakra-ui/react';
+import Thankyou from '../Components/Monu/Payment/ThankYou';
+import Cart from '../Components/Monu/Cart/Cart';
 const AllRoutes = () => {
   return (
     <Routes>
@@ -15,7 +17,9 @@ const AllRoutes = () => {
       <ProductPage/>
       </PrivateRoute>}></Route>
       <Route path='/about' element={<AboutUs />}></Route>
+      <Route path='/cart' element={<Cart />}></Route>
       <Route path='/payment' element={<ChakraProvider><Payment /></ChakraProvider>}></Route>
+      <Route path='/thanks' element={<ChakraProvider><Thankyou /></ChakraProvider>}></Route>
     </Routes>
   );
 };
