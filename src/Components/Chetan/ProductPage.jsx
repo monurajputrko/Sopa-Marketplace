@@ -5,6 +5,7 @@ import { getProducts } from '../../Redux/ProductReducer/action';
 import style from "./ProductPage.module.css"
 import Pagination from './Pagination';
 import axios from 'axios';
+import { Link, Navigate, useNavigate } from 'react-router-dom';
 
 function ProductPage() {
   
@@ -13,6 +14,7 @@ function ProductPage() {
   const[page,setPage]=useState(1);
   const[totalPage,setTotalPage]=useState(1);
   const dispatch=useDispatch();
+  const navigate=useNavigate();
   const {products,loading}=useSelector((store)=>store.ProductsReducer);
   console.log(products);
 
@@ -33,7 +35,6 @@ function ProductPage() {
   let baseurl=`https://sopa-marketplace-api.vercel.app/products?_page=${page}&_limit=10`
 
 
-  // let baseurl=`https://sopa-marketplace-api.vercel.app/products?_page=1&_limit=10`
 
   useEffect(()=>{
     getTotalPage();
@@ -49,10 +50,17 @@ function ProductPage() {
     getProducts(dispatch,baseurl);
   },[filter,filter2,page]);
   console.log(filter);
+
+  const handlePage=(id)=>{
+    console.log(id);
+   navigate(`/products/${id}`)
+  }
   if(loading)
   {
     return <Loading/>;
   }
+
+  
   
   return (
     <div className={style.mainContainer}>
@@ -74,7 +82,7 @@ function ProductPage() {
     </div>
     <div className={style.Container}>
       {products?.map((ele)=>(
-        <div className={style.card} onClick={()=>console.log("clicked")}>
+        <div className={style.card} onClick={()=>handlePage(ele.id)}>
           <img src={ele.image}/>
           <h4>{ele.title}</h4>
           <div className={style.detail}>
@@ -82,6 +90,7 @@ function ProductPage() {
            <p style={{color:"#de6737"}}>₹:{ele.price}/-</p>
           </div>
         </div>
+  
       ))}
     </div>
     <Pagination page={page} totalPage={totalPage} changePage={changePage}/>
