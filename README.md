@@ -1,8 +1,10 @@
 # Sopa Marketplace
 
-### To Start App Use `npm start`
+
 ### Backend :- Json Server
 ### Front End :- Html,css,js,bootstrap,Chackra Ui
+
+### To Start App Use `npm start`
 
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
