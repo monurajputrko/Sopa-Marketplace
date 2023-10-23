@@ -1,0 +1,15 @@
+.prev,.next,.value{
+    border: none;
+    width: 60px;
+    padding: 3px;
+    margin: 1px;
+}
+.pagination{
+    display: flex;
+    justify-content: center;
+}
+.prev,.next{
+    background-color: #de6737;
+    color: white;
+    border-radius: 10px;
+}
