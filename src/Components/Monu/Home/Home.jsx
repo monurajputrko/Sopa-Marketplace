@@ -1,9 +1,25 @@
-import React from "react";
-import { Partner } from "./Partner";
+
+import { useDispatch, useSelector } from "react-redux";
 import "./Home.css"
+import "./Products.css"
 import Products from "./Products";
 import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { getProducts } from "../../../Redux/ProductReducer/action";
 const Home = () => {
+  const dispatch = useDispatch();
+  const { products, loading } = useSelector((store) => store.ProductsReducer);
+   console.log(products);
+   const [filter, setFilter] = useState("all");
+
+   let baseurl = `https://sopa-marketplace-api.vercel.app/home?_limit=8&`;
+   useEffect(() => {
+     if (filter !== "default") {
+       baseurl = baseurl + `category=${filter}`;
+     }
+     getProducts(dispatch, baseurl);
+   }, [filter]);
+   console.log(filter);
   return (
     <div>
       <div  style={{display:"flex",flexWrap:"wrap",flexDirection:"row",width:"100%"}} >
@@ -48,16 +64,10 @@ const Home = () => {
                </Link>
             </div>
             </div>
-              {/* <img
-                style={{width:"70%"}}
-                src="https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGUlMjBjb21tZXJjZXxlbnwwfHwwfHx8MA%3D%3D"
-                alt="mmm"
-              /> */}
           </div>
           
         </div>
       </div>
-      {/* <Partner /> */}
       
       <div  class="d-flex p-2" style={{alignItems:"center",justifyContent:"center"}}><h6 style={{fontSize:"200%"}}><h5 style={{display:"inline",color:"#DE6737",fontSize:"100%",fontWeight:"bold"}}>SOPA</h5> makes clothes
 to elevate everyday life 
@@ -68,10 +78,108 @@ sense of freedom that comes with <h5 style={{display:"inline-block",color:"#DE67
 <h1 >SHOP BY <h1 style={{display:"inline",color:"#DE6737"}}>ESSENTIALS</h1></h1>
 <br />
 
-<div  style={{display:"flex",flexWrap:"wrap",flexDirection:"row",justifyContent:"center"}}>
-<div style={{display:"inline",fontSize:"25px",border:"2px solid black",margin:"1%",backgroundColor:"#DE6737"}}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>All</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div><div style={{display:"inline",fontSize:"25px",border:"2px solid black",margin:"1%"}}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Winter collections</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div><div style={{display:"inline",fontSize:"25px",border:"2px solid black",margin:"1%"}}>&nbsp;&nbsp;&nbsp;&nbsp;<strong>New Arrivals</strong>&nbsp;&nbsp;&nbsp;&nbsp;</div><div style={{display:"inline",fontSize:"25px",border:"2px solid black",margin:"1%"}}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Best Sellers</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div><div style={{display:"inline",fontSize:"25px",border:"2px solid black",margin:"1%"}}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Flash Sale</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
-</div>
-<Products />
+{/* ------------- Product Cards ------------------------------------------------ */}
+
+<div
+        
+          style={{
+            display: "flex",
+            flexWrap: "wrap",
+            flexDirection: "row",
+            justifyContent: "center",
+          }}
+        >
+          <div
+           className="Mdiv"
+            style={{
+              display: "inline",
+              fontSize: "25px",
+              border: "2px solid black",
+              margin: "1%",
+              backgroundColor: "#DE6737",
+            }}
+            onClick={() => {
+              setFilter("all");
+            }}
+          >
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>All</strong>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </div>
+          <div
+          className="Mdiv"
+            style={{
+              display: "inline",
+              fontSize: "25px",
+              border: "2px solid black",
+              margin: "1%",
+              "&:hover": {
+                backgroundColor: "red",
+                color: "white",
+              },
+            }}
+            onClick={() => {
+              setFilter("winter");
+            }}
+          >
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Winter collections</strong>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </div>
+          <div
+          className="Mdiv"
+            style={{
+              display: "inline",
+              fontSize: "25px",
+              border: "2px solid black",
+              margin: "1%",
+            }}
+            onClick={() => {
+              setFilter("new");
+            }}
+          >
+            &nbsp;&nbsp;&nbsp;&nbsp;<strong>New Arrivals</strong>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+          </div>
+          <div
+          className="Mdiv"
+            style={{
+              display: "inline",
+              fontSize: "25px",
+              border: "2px solid black",
+              margin: "1%",
+            }}
+            onClick={() => {
+              setFilter("best");
+            }}
+          >
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Best Sellers</strong>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </div>
+          <div
+          className="Mdiv"
+            style={{
+              display: "inline",
+              fontSize: "25px",
+              border: "2px solid black",
+              margin: "1%",
+            }}
+            onClick={() => {
+              setFilter("flash");
+            }}
+          >
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Flash Sale</strong>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </div>
+        </div>
+        <div id="product1" class="section-p1">
+        
+        <div class="pro-container">
+{
+  products.map((e)=>(
+    <Products key={e.id} e={e} />
+  ))
+}
+ </div>
+ </div>
 
 <br /><br />
 <div style={{backgroundColor: "#F2F2F3"}} class="d-flex justify-content-center">
@@ -79,9 +187,6 @@ sense of freedom that comes with <h5 style={{display:"inline-block",color:"#DE67
 <div>
   <img width="100%" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjWAchrc8zIxfQZjEsqoKBi9XFn0Bn7r5u1Ja6LEx2KpDofSWehbF-7dB8ewGK5Xnm7qRgMG65JvsU7jibVI1dN19bZMDb1tRph049k5hXj0TdKaMcHy1-i5LyxYRCd3IHL5dQs_3Xe33Ifq6a-MmAQ3XaskiZgbars7ZiUPK8sBiOi7O9zskf00_YxaFY5/s16000/mmm.png" alt="mm" />
 </div>
-{/* <div>
-<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhnJFxIrzCdW-RsFqgOG8LwbnvjQOCDW8a0G9PrAkNRd4BOhVrLlwIjAxeL2_LuaWduRBX2hO53GZu0grs-Cwynqf1SF2t7BUTVw8uuO4VxHIliEpCMjmPQVm05q54ESi_9NupG3DuoOVNTs2DlYH7Usd_p2-Jb14vXh-Pl0_JPAI9dwIECl5P9ZdaE2zmI/s320/men.png" alt="mm" />
-</div> */}
 </div>
 <h1 style={{backgroundColor: "#F2F2F3"}}></h1>
 <h1 style={{backgroundColor: "#F2F2F3"}}> Want To <h1 style={{display:"inline",color:"#DE6737"}}>Design</h1> Your Own Calm We Can Do It </h1>

@@ -5,13 +5,16 @@ import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { getAuth,GoogleAuthProvider,signInWithPopup } from 'firebase/auth';
 import { useNavigate } from "react-router-dom";
-
+import { MyContext } from "../../../Context/Create";
+import { useContext } from "react";
+import { Button, Wrap, WrapItem, useToast } from "@chakra-ui/react";
 
 
 const Login = ({onClose,setImg1,setM}) => {
   const [isSignup, setIsSignup] = useState(false);
   const navigate = useNavigate();
-
+  const { isAuth, setAuth } = useContext(MyContext);
+  console.log(isAuth);
   const toggleForm = () => {
     setIsSignup(!isSignup);
   };
@@ -38,8 +41,10 @@ const Login = ({onClose,setImg1,setM}) => {
       .then((result) => {
         setImg1(result.user.photoURL);
         console.log(result.user.photoURL);
+        setAuth(true);
         setM();
         onClose();
+        
       })
       .catch((error) => {
         console.error(error);
@@ -114,5 +119,6 @@ const Login = ({onClose,setImg1,setM}) => {
     </div>
   );
 };
+
 
 export default Login;
