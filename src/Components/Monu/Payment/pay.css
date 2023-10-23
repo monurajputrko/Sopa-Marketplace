@@ -5,9 +5,10 @@
 
 .btn > button {
   /* padding: 16px 40px; */
-  background: linear-gradient(to right, rgb(0, 168, 255), rgb(2, 232, 255));
+  /* background: linear-gradient(to right, rgb(0, 168, 255), rgb(2, 232, 255)); */
   /* border-radius: 30px; */
   /* font-size: 18px; */
+  background-color: #DE6737;
   color: white;
   /* margin-top: 8px; */
   outline: none;

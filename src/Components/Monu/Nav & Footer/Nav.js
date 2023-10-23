@@ -109,14 +109,22 @@ export const Nav = () => {
                   </Link>
                  
                 </li>
-
                 <li class="nav-item">
                   <Link
-                    to={"contact"}
+                    to={"/cart"}
                     style={{ fontWeight: "bold", fontSize: "20px" }}
                     class="nav-link"
                   >
-                    Contact
+                    Cart
+                  </Link>
+                </li>
+                <li class="nav-item">
+                  <Link
+                    to={"/about"}
+                    style={{ fontWeight: "bold", fontSize: "20px" }}
+                    class="nav-link"
+                  >
+                    About
                   </Link>
                 </li>
                 <li class="nav-item">
