@@ -4,17 +4,39 @@ import { useDispatch, useSelector } from 'react-redux'
 import { getProducts } from '../../Redux/ProductReducer/action';
 import style from "./ProductPage.module.css"
 import Pagination from './Pagination';
+import axios from 'axios';
 
 function ProductPage() {
   
   const[filter,setFilter]=useState("default");
   const[filter2,setFilter2]=useState("default");
+  const[page,setPage]=useState(1);
+  const[totalPage,setTotalPage]=useState(1);
   const dispatch=useDispatch();
   const {products,loading}=useSelector((store)=>store.ProductsReducer);
   console.log(products);
 
+  
+  const getTotalPage= async()=>{
+    try {
+      const res=await axios.get('https://sopa-marketplace-api.vercel.app/products');
+      console.log(Math.round(res.data.length/10));
+      setTotalPage(Math.round(res.data.length/10));
+    } catch (error) {
+      
+    }
+  }
+  
+  const changePage=(value)=>{
+    setPage(value);
+  }
+  let baseurl=`https://sopa-marketplace-api.vercel.app/products?_page=${page}&_limit=10`
+
+
   let baseurl=`https://sopa-marketplace-api.vercel.app/products?_page=1&_limit=10`
+
   useEffect(()=>{
+    getTotalPage();
     if(filter!=="default")
     {
       baseurl=baseurl+`&_sort=price&_order=${filter}`
@@ -25,7 +47,7 @@ function ProductPage() {
       baseurl=baseurl+`&category=${filter2}`
     }
     getProducts(dispatch,baseurl);
-  },[filter,filter2]);
+  },[filter,filter2,page]);
   console.log(filter);
   if(loading)
   {
@@ -62,7 +84,7 @@ function ProductPage() {
         </div>
       ))}
     </div>
-    <Pagination/>
+    <Pagination page={page} totalPage={totalPage} changePage={changePage}/>
     </div>
   )
 }
