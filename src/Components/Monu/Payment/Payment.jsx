@@ -45,7 +45,7 @@ import {
     const { isOpen, onOpen, onClose } = useDisclosure();
     // const theme = useSelector((state) => state.theme);
     // const storedata = useSelector((state) => state.detail);
-    const storedata = 10;
+    var storedata = 1040;
     const theme = false;
     const [start, setstart] = useState("");
     const [end, setend] = useState("");
@@ -58,7 +58,10 @@ import {
     const [RazorPay, setRazorPay] = useState(false);
     // const { singleProductData } = useContext(HolidayContext);
     // console.log(singleProductData); // udate the data from single Product page
-  
+    const value=useSelector((store)=>store.QuantityReducer);
+    console.log(value.quantity
+      )
+
     const [pin, setpin] = useState({
       first: "",
       sec: "",
@@ -88,6 +91,13 @@ import {
     //   window.scrollTo({
     //     top: 0,
     //   });
+    storedata = localStorage.getItem('totalPrice');
+    // useEffect(() => {
+    //   console.log("Before localStorage retrieval:", storedata);
+      
+    //   console.log("After localStorage retrieval:", storedata);
+    // }, []);
+   
   
     //   storedata?.destinations?.filter((el, i) => {
     //     if (i === 0) {
@@ -110,7 +120,7 @@ import {
   
     const handlePayment = () => {
       const Pr =
-        ((traveller * (storedata?.act_price - storedata?.act_price * 0.3)) / 2) *
+        ((storedata)) *
         100;
       const checkout = Number(Pr * 1);
       console.log("amount ", checkout);
@@ -167,9 +177,9 @@ import {
                       lg: "15px 0 0 15px",
                     }}>
                     <Text fontSize={"18px"} fontWeight={"700"}>
-                      Sunday, Oct 1st, 2023
+                     Free Delivery Till Sunday, Nov 1st, 2023
                     </Text>
-                    <Text fontSize={"15px"}>to Thursday, Oct 10st, 2023</Text>
+                    <Text fontSize={"15px"}>to Thursday, Nov10st, 2023</Text>
                   </Box>
                   <Box
                     border={"1px solid gray"}
@@ -184,9 +194,8 @@ import {
                       <AiFillCheckCircle size={"35px"} />
                       <Text pt={"5px"} px={"10px"}>
                         Only ₹{" "}
-                        {(storedata?.act_price - storedata?.act_price * 0.3) /
-                          2?.toLocaleString("en-US")}{" "}
-                        upfront per person The remaining amount will be due on Oct
+                        {storedata?.toLocaleString("en-US")}{" "}
+                        upfront per person The remaining amount will be due on Nov
                         1st, 2023
                       </Text>
                     </Flex>
@@ -210,7 +219,7 @@ import {
                   </Box>
                 </Flex>
               </Box>
-              <Box
+              {/* <Box
                 my={"25px"}
                 p={"20px"}
                 borderRadius={"15px"}
@@ -241,7 +250,6 @@ import {
                     />
                     <Text px={"10px"}>{traveller}</Text>
                     <IconButton
-                      // isDisabled={traveller === storedata?.group_size}
                       onClick={() => {
                         settraveller((pre) => +pre + 1);
                       }}
@@ -251,7 +259,7 @@ import {
                     />
                   </HStack>
                 </HStack>
-              </Box>
+              </Box> */}
   
               <Box
                 p={"20px"}
@@ -259,7 +267,7 @@ import {
                 boxShadow={"md"}
                 borderRadius={"15px"}>
                 <HStack>
-                  <BsFill2SquareFill size={"30px"} />
+                  <BsFill1SquareFill size={"30px"} />
                   <Text px={"10px"} fontWeight={"700"} fontSize={"20px"}>
                     Add traveller details
                   </Text>
@@ -1050,7 +1058,7 @@ import {
                 bg={theme ? "#191b1d" : "white"}
                 borderRadius={"15px"}>
                 <HStack>
-                  <BsFill3SquareFill size={"30px"} />
+                  <BsFill2SquareFill size={"30px"} />
                   <Text
                     pb={"5px"}
                     fontWeight={"700"}
@@ -1519,9 +1527,9 @@ import {
                 boxShadow={"md"}
                 lineHeight={"25px"}>
                 <Text pb={"15px"} fontSize={"20px"} fontWeight={"700"}>
-                  My Trip
+                  Total Products :- {value.quantity}
                 </Text>
-                <Text fontSize={"15px"} fontWeight={"600"}>
+               {/*  <Text fontSize={"15px"} fontWeight={"600"}>
                   {storedata?.title}
                 </Text>
                 <Text pb={"10px"} fontSize={"15px"}>
@@ -1556,7 +1564,7 @@ import {
                 </Text>
                 <Text pb={"10px"} fontSize={"15px"}>
                   Accommodation, Guide, Meals, Transport
-                </Text>
+                </Text> */}
               </Box>
   
               <Pricediv
@@ -1587,16 +1595,16 @@ import {
         <Flex justifyContent={"space-between"}>
           <Box pb={"14px"}>
             <Text>Base price</Text>
-            <Text fontSize={"14px"}>
+            {/* <Text fontSize={"14px"}>
               {traveller} Traveller x ₹
               {storedata?.act_price?.toLocaleString("en-US")}
-            </Text>
+            </Text> */}
           </Box>
           <Text>
-            ₹ {(traveller * storedata?.act_price)?.toLocaleString("en-US")}
+            ₹ {storedata?.toLocaleString("en-US")}
           </Text>
         </Flex>
-        <Flex
+        {/* <Flex
           justifyContent={"space-between"}
           pb={"15px"}
           borderBottom={"1px solid silver"}>
@@ -1605,15 +1613,12 @@ import {
             - ₹{" "}
             {(traveller * storedata?.act_price * 0.3)?.toLocaleString("en-US")}
           </Text>
-        </Flex>
+        </Flex> */}
         <Flex justifyContent={"space-between"} pt={"20px"}>
           <Text fontWeight={"700"}>Total due</Text>
           <Text fontSize={"20px"} fontWeight={"700"}>
             ₹{" "}
-            {(
-              traveller * storedata?.act_price -
-              storedata?.act_price * 0.3
-            )?.toLocaleString("en-US")}
+            {(storedata?.toLocaleString("en-US"))}
           </Text>
         </Flex>
         <Flex
@@ -1628,11 +1633,7 @@ import {
             <Spacer />
             <Text fontWeight={"700"}>
               ₹{" "}
-              {(
-                (traveller *
-                  (storedata?.act_price - storedata?.act_price * 0.3)) /
-                2
-              )?.toLocaleString("en-US")}
+              {storedata?.toLocaleString("en-US")}
             </Text>
           </Flex>
           {/* <Flex>

@@ -6,6 +6,7 @@ import CartItem from "./Cartitem";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import Swal from "sweetalert2";
+import { useSelector } from "react-redux";
 
 function Cart() {
 
@@ -16,6 +17,8 @@ function Cart() {
     const [itemTotal, setItemTotal] = useState(0);
     const [count, setCount] = useState(0);
     
+    const value=useSelector((store)=>store.QuantityReducer);
+    console.log(value.cartItem)
 
     useEffect(async () => {
           
@@ -24,7 +27,7 @@ function Cart() {
         console.log(get.data);
 
         // const storedCartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
-        setCartItems(get.data);
+        setCartItems(value.cartItem);
 
     }, []);
 
@@ -101,7 +104,7 @@ function Cart() {
             </div>
             <div className="subtotal">Subtotal: <div>₹ {subtotal}</div></div>
             <div className="orderTotal">Order total: <div>₹ {orderTotal}</div></div>
-            <button id="continue-btn">Continue</button>
+           <Link to={'/payment'}><button id="continue-btn">Continue</button></Link>
         </div>
         }
     </div>
