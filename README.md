@@ -2,7 +2,7 @@
 
 
 ### Backend :- Json Server
-### Front End :- Html,css,js,bootstrap,
+### Front End :- React,Redux,Html,css,js
 
 ### To Start App Use `npm start`
 
