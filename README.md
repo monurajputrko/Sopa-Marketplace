@@ -2,7 +2,7 @@
 
 
 ### Backend :- Json Server
-### Front End :- Html,css,js,bootstrap,Chackra Ui
+### Front End :- Html,css,js,bootstrap,
 
 ### To Start App Use `npm start`
 
