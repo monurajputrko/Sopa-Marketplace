@@ -73,12 +73,26 @@ function Cart() {
             if (coupon === "SOPA10" || coupon === "sopa10") {
                 setOrderTotal(Math.ceil(orderTotal * 0.9))
                 setCount(count + 1);
+                Swal.fire({
+  title: "Good job!",
+  text: "Coupon Applied successfully",
+  icon: "success"
+});
             }
             else {
-                alert("Enter valid coupon code!!!");
+                Swal.fire({
+  icon: "error",
+  title: "Oops...",
+  text: "Please Enter valid coupon code!!!",
+});
             }
         }
         else {
+            Swal.fire({
+  title: "Sorry",
+  text: "Coupon already applied!!!",
+  icon: "question"
+});
             alert("Coupon already applied!!!")
         }
     }
