@@ -17,8 +17,12 @@ const AllRoutes = () => {
        <PrivateRoute>
       <ProductPage/>
       </PrivateRoute>}></Route>
+      <Route path='/cart' element={
+       <PrivateRoute>
+      <Cart />
+      </PrivateRoute>}></Route>
       <Route path='/products/:id' element={<ProductDetail/>}></Route>
-      <Route path='/cart' element={<Cart />}></Route>
+      {/* <Route path='/cart' element={}></Route> */}
       <Route path='/about' element={<AboutUs />}></Route>
       <Route path='/payment' element={<ChakraProvider><Payment /></ChakraProvider>}></Route>
       <Route path='/Payment-Success' element={<ChakraProvider><Thankyou /></ChakraProvider>}></Route>

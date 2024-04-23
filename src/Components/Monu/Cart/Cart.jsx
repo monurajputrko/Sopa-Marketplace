@@ -20,14 +20,17 @@ function Cart() {
     const value=useSelector((store)=>store.QuantityReducer);
     console.log(value.cartItem)
 
-    useEffect(async () => {
-          
+    const cartFetch =async ()=>{
         const get = await axios.get(`https://sopa-marketplace-api.vercel.app/cart`);
 
         console.log(get.data);
 
-        // const storedCartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
         setCartItems(value.cartItem);
+    }
+
+    useEffect(() => {
+          
+      cartFetch();
 
     }, []);
 
@@ -65,10 +68,11 @@ function Cart() {
     }
 
     const applyCoupon = () => {
-        setCount(count + 1);
+        
         if (count == 0) {
-            if (coupon === "SOPA10") {
+            if (coupon === "SOPA10" || coupon === "sopa10") {
                 setOrderTotal(Math.ceil(orderTotal * 0.9))
+                setCount(count + 1);
             }
             else {
                 alert("Enter valid coupon code!!!");

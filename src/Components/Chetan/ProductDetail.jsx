@@ -1,11 +1,12 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import style from "./ProductDetail.module.css"
 import { useDispatch, useSelector } from 'react-redux';
 import { Decrement, Increment, getCartItem } from '../../Redux/ProductReducer/action';
+import Swal from 'sweetalert2';
 function ProductDetail() {
-
+   const navigate = useNavigate();
     const{id}=useParams();
     console.log(id);
     const dispatch=useDispatch();
@@ -46,8 +47,36 @@ function ProductDetail() {
         }
 
         dispatch(getCartItem(item));
-        alert("item added to cart")
+        Swal.fire({
+            title: "Great!",
+            text: "Product Added To Cart",
+            icon: "success"
+          });
     }
+
+    const handlePayment = (price) => {
+        //   const Pr = 299;
+        const checkout = Number(price * 100);
+        console.log(checkout);
+        const options = {
+          key: "rzp_test_dnv3nQiWbqzTGt",
+          amount: checkout,
+          currency: "INR",
+          name: "Sopa Marketplace",
+          description: "Payment",
+          image: "https://cdn.animaapp.com/projects/653027fd5d5a615f385b22b9/releases/653029a770b79ea74ce24116/img/logo-12@2x.png",
+          handler: function (response) {
+            navigate("/");
+          },
+          theme: {
+            color: "#DE6737",
+          },
+        };
+    
+        const rzp1 = new window.Razorpay(options);
+        rzp1.open();
+      };
+
   return (
     <div className={style.mainContainer}>
     
@@ -70,7 +99,9 @@ function ProductDetail() {
         
         </div>
         <div className={style.btn}>
-        <button className={style.btn2}>Buy Now</button>
+        <button   onClick={() => {
+                    handlePayment(pro.price);
+                  }} className={style.btn2}>Buy Now</button>
         <button className={style.btn2} onClick={handelCart} >Add to Cart</button>
         </div>
         <br></br>

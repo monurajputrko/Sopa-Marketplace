@@ -92,23 +92,7 @@ import {
     //     top: 0,
     //   });
     storedata = localStorage.getItem('totalPrice');
-    // useEffect(() => {
-    //   console.log("Before localStorage retrieval:", storedata);
-      
-    //   console.log("After localStorage retrieval:", storedata);
-    // }, []);
-   
-  
-    //   storedata?.destinations?.filter((el, i) => {
-    //     if (i === 0) {
-    //       setstart(el);
-    //     }
-    //     if (i === len - 1) {
-    //       setend(el);
-    //     }
-    //     return el;
-    //   });
-    // }, []);
+    
     const handleRadioChange = (value) => {
       setRazorPay(true);
       setCardPay(false);
@@ -130,12 +114,15 @@ import {
         currency: "INR",
         name: "Sopa Marketplace",
         description: "Payment",
-        image: "https://rb.gy/6cdbi",
+        image: "https://cdn.animaapp.com/projects/653027fd5d5a615f385b22b9/releases/653029a770b79ea74ce24116/img/logo-12@2x.png",
         handler: function (response) {
           navigate("/Payment-Success");
           console.log(response);
           // dispatch(removeSingleProduct());
           // Update the state to indicate payment completion
+        },
+        theme: {
+          color: "#DE6737",
         },
       };
   
